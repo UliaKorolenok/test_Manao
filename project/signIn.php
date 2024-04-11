@@ -14,7 +14,5 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
         $authorization = new Authorization($jsonFile);
 
         $authorization->authorizeUser($login, $password);
-    } else{
-        echo('dsdssd');
     }
 }
