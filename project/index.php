@@ -1,3 +1,8 @@
+<?php
+session_start();
+if ($_SESSION['user']) {
+    header('Location: /project/profile.php');
+} ?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -10,13 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="project/main.js"></script>
+    <script src="/project/main.js"></script>
 </head>
-<?php
-session_start();
-if ($_SESSION['user']) {
-    header('Location: project/profile.php');
-} ?>
 
 <body>
     <div class="container-fluid">

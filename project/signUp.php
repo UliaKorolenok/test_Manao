@@ -1,10 +1,13 @@
 <?php
 session_start();
 if ($_SESSION['user']) {
-    header('Location: profile.php');
+    header('Location: /project/profile.php');
 }
 
-require_once 'user.php';
+require_once  '../vendor/autoload.php';
+
+use App\Registration\Registration;
+
 $jsonFile = '../users.json';
 
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {

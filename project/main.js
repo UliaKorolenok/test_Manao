@@ -7,7 +7,7 @@ $(document).ready(function () {
         var formData = $(this).serialize();
         $.ajax({
             type: 'POST',
-            url: 'project/signUp.php',
+            url: '/project/signUp.php',
             dataType: 'json',
             data: formData,
             success: function (response) {
@@ -32,12 +32,12 @@ $(document).ready(function () {
         var formData = $(this).serialize();
         $.ajax({
             type: 'POST',
-            url: 'project/signIn.php',
+            url: '/project/signIn.php',
             dataType: 'json',
             data: formData,
             success: function (response) {
                 if (response.success) {
-                    document.location.href = 'project/profile.php';
+                    document.location.href = '/project/profile.php';
                 } else {
                     $.each(response.errors, function (key, value) {
                         $(`input[name="${key}"]`).after(`<p class="error">${value}</p>`);

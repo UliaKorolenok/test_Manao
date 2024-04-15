@@ -1,5 +1,4 @@
-RewriteEngine On
-RewriteRule ^index\.php$ /project/index.php [L]
+DirectoryIndex project/index.php
 <FilesMatch "users.json$">
     Require all denied
 </FilesMatch>

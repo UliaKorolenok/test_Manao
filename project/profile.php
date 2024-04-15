@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Профиль</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-</head>
 <?php
 session_start();
 if (!$_SESSION['user']) {
     header('Location: index.php');
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Профиль</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
 
 <body>
     <div class="container-fluid mt-2">
